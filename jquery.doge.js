@@ -3,7 +3,7 @@
     //  such plugin
     $.doge = function(tings) {
         //  very jquery
-        var doge = $('body').css('font-family', 'Comic Sans MS, Comic Sans, Chalkboard, cursive');
+        $("body").append("<style>* { font-family: 'Comic Sans MS', 'Comic Sans', Chalkboard, cursive !important; }</style>");
         
         //  much array
         tings = $.extend(['doge', 'shibe', 'excite', 'impress', 'skill', 'warn'], tings);
@@ -28,8 +28,10 @@
             pointerEvents: 'none'
         });
         
+        var potatos = ["http://i3.kym-cdn.com/photos/images/original/000/581/296/c09.jpg", "http://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg", "http://images.says.com/uploads/story_source/source_image/257750/522b.jpg", "http://cdn.superbwallpapers.com/wallpapers/meme/doge-pattern-27481-1600x1200.jpg", "http://dogecoin.com/imgs/doge.png", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-4.jpg", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-3.jpg", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-2.jpg", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-1.jpg", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-3.jpg", "http://www.freeallimages.com/wp-content/uploads/2014/09/doge-original-5.jpg"];
         $('img').each(function() {
-            $(this).attr('src', 'https://images.encyclopediadramatica.es/3/3e/Doge_full_image.jpg');
+            // many random
+            $(this).attr('src', potatos[Math.floor(Math.random()*potatos.length)]);
         });
      
         setInterval(function() {
